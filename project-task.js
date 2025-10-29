@@ -39,7 +39,6 @@ const todos = [
   3. Return only the tasks that are not completed.
   */
   
-  
   /*
   🔹 Task 2: Sort Tasks by Priority
   
@@ -48,27 +47,24 @@ const todos = [
   2. Use an anonymous function as the comparison function.
   3. Sort tasks in ascending order of priority (1 = highest).
   */
-  
-  
+
   /*
-  🔹 Task 3: Mark All Tasks as Completed
-  
-  Step-by-Step:
-  1. Use the `map()` method to return a new array.
-  2. Use an anonymous function to modify each object.
-  3. Change the `completed` property to `true` for every task.
-  */
-  
-  
-  /*
-  🔹 Task 4: Combine Filters
+  🔹 Task 3: Combine Filters
   
   Step-by-Step:
   1. First, filter the todos to get only incomplete tasks.
   2. Then, sort the filtered results by priority using `sort()`.
   3. Use method chaining to perform both steps together.
   */
+
+  /*
+  🔹 Task 4: Mark All Tasks as Completed
   
+  Step-by-Step:
+  1. Use the `map()` method to return a new array.
+  2. Use an anonymous function to modify each object.
+  3. Change the `completed` property to `true` for every task.
+  */
   
   // ============================================
   // 🧪 Console Test Your Work
