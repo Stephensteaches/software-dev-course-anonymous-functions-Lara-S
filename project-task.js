@@ -18,13 +18,13 @@ This activity helps build a dynamic "To-Do List Filter" based on different crite
 // 🚀 Starting Point: To-Do List Array
 // ============================================
 
-const todos = [
-    { task: "Wash the dishes", completed: false, priority: 3 },
-    { task: "Write a blog post", completed: true, priority: 1 },
-    { task: "Buy groceries", completed: false, priority: 2 },
-    { task: "Study JavaScript", completed: true, priority: 1 },
-    { task: "Walk the dog", completed: false, priority: 2 },
-  ];
+//const todos = [
+  //  { task: "Wash the dishes", completed: false, priority: 3 },
+  //  { task: "Write a blog post", completed: true, priority: 1 },
+  //  { task: "Buy groceries", completed: false, priority: 2 },
+  //  { task: "Study JavaScript", completed: true, priority: 1 },
+  //  { task: "Walk the dog", completed: false, priority: 2 },
+  //];
   
   // ============================================
   // 🔍 Tasks
@@ -75,3 +75,38 @@ const todos = [
   // console.log("All Tasks Completed:", ...);
   // console.log("Sorted Incomplete Tasks:", ...);
   
+
+  const todos = [
+    { task: "Wash the dishes", completed: false, priority: 3 },
+    { task: "Write a blog post", completed: true, priority: 1 },
+    { task: "Buy groceries", completed: false, priority: 2 },
+    { task: "Study JavaScript", completed: true, priority: 1 },
+    { task: "Walk the dog", completed: false, priority: 2 },
+  ];
+
+  // Task 1: Filter Incomplete Tasks
+ let incompleteTasks = todos.filter(function(todo) {
+    return !todo.completed;
+  });
+ console.log("Incomplete Tasks:", incompleteTasks);
+
+// Task 2: Sort Tasks by Priority
+let sortPriority = todos.sort(function (a, b) {
+  return (a.priority - b.priority);
+});
+console.log("Sorted by Priority:", sortPriority);
+
+// Task 3: Method Chaining - filter for incomplete and sort by priority
+let sortedIncomplete = todos.filter(function(todo) {
+  return !todo.completed;
+});
+todos.sort(function(a, b) {
+  return (a.priority - b.priority);
+});
+console.log("Sorted Incomplete Tasks:", sortedIncomplete);
+
+// Task 4: Mark All Tasks as Completed
+let allComplete = todos.map(function(todo) {
+  return (todo.completed = true);
+});
+console.log("All Tasks Completed:", todos);
